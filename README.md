@@ -12,6 +12,12 @@
 
 ## Run both server(nestjs) & client(angular) tasks
 
+### make sure naginstall kag nx
+
+npm i -g nx
+
+### mao ni cmd to run ang frontend ug backend
+
 nx run-many --target=serve --projects=client,server
 
 ## Add new projects
