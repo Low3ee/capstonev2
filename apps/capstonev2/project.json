@@ -1,0 +1,26 @@
+{
+  "name": "capstonev2",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/capstonev2/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "capstonev2:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "capstonev2:build:development"
+        },
+        "production": {
+          "buildTarget": "capstonev2:build:production"
+        }
+      }
+    }
+  }
+}
